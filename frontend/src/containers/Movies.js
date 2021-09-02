@@ -3,18 +3,18 @@ import Movie from '../components/Movie';
 
 
 const Movies = (props) => {
-    let state = {
-        movies: [
-        { id:1, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
-        { id:2, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
-        { id:3, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
-        { id:4, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
-        { id:5, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
-        { id:6, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
-        { id:7, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
-        { id:8, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
-        ]
-    }
+    // let state = {
+    //     movies: [
+    //     { id:1, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
+    //     { id:2, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
+    //     { id:3, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
+    //     { id:4, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
+    //     { id:5, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
+    //     { id:6, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
+    //     { id:7, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
+    //     { id:8, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
+    //     ]
+    // }
 
     let data = props.data;
     if(state.loading){
