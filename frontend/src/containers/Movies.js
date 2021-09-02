@@ -1,41 +1,30 @@
-import React from 'react';
-import Movie from '../components/Movie';
+import React, { Component } from 'react';
+import Movie from '../components/Movie'
+import { graphql } from 'react-apollo';
+import {allMovies} from '../queries/queries'
 
-
-const Movies = (props) => {
-    // let state = {
-    //     movies: [
-    //     { id:1, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
-    //     { id:2, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
-    //     { id:3, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
-    //     { id:4, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
-    //     { id:5, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
-    //     { id:6, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
-    //     { id:7, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
-    //     { id:8, name: 'John Wick Parabellum', genre: 'Action', year: 2019, image: 'https://rb.gy/mmwyus' },
-    //     ]
-    // }
-
-    let data = props.data;
-    if(state.loading){
-        return <h2 className="message">We are loading your movies...</h2>
-      }
-      if(state.movies.length === 0){
-        return <h2 className="message">Please add movies of your choice</h2>
-      }
+class Movies extends Component {
+  render() {
+    let data = this.props.data
+    if(data.loading){
+      return <h2 className="message">We are loading your movies...</h2>
+    }
+    if(data.movies.length === 0){
+      return <h2 className="message">Please add movies of your choice</h2>
+    }
     return (
-        <div className="movies">
-            {state.movies.map((movie) => {
-                return <Movie
-                    key={movie.id}
-                    name={movie.name}
-                    genre={movie.genre}
-                    year={movie.year}   
-                    image={movie.image}
-                />
-            })}
-        </div>
-    )
+      <div className="movies">
+        {data.movies.map((movie) => {
+          return <Movie 
+            key={movie.name}
+            name={movie.name}
+            genre={movie.genre}
+            year={movie.year}
+            />
+        })}
+      </div>
+    );
+  }
 }
 
-export default Movies;
+export default graphql(allMovies)(Movies)

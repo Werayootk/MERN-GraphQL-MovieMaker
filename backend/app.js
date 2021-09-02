@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const { graphqlHTTP } = require("express-graphql");
 const movieSchema = require('./schema/schema');
 const resolvers = require('./resolver/resolver');
+const cors = require('cors');
 
 dotenv.config({ path: "./config/dev.env" });
 
@@ -15,6 +16,8 @@ mongoose
   })
   .then(() => console.log("MongoDB Connected!"))
     .catch((err) => console.log("Error", err));
+
+app.use(cors())
 
 app.use('/graphql', graphqlHTTP({
     schema: movieSchema,
