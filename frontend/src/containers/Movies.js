@@ -20,6 +20,7 @@ class Movies extends Component {
             name={movie.name}
             genre={movie.genre}
             year={movie.year}
+            image={movie.image}
             />
         })}
       </div>
