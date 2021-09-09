@@ -7,9 +7,9 @@ const Header = () => {
       <a className="logo" href="/">Movie Maker</a>
       <div className="search-container">
         <form>
-          <Link smooth to="#form">Add Movies</Link>
-          <input type="text" placeholder="Search.." name="search"/>
-          <button type="submit"><i className="fa fa-search"></i></button>
+          {/* <Link smooth to="#form">Add Movies</Link> */}
+          {/* <input type="text" placeholder="Search.." name="search"/> */}
+          {/* <button type="submit"><i className="fa fa-search"></i></button> */}
         </form>
       </div>
     </div>

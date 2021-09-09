@@ -22,7 +22,8 @@ const resolvers = {
       let movie = new Movie({
         name: args.name,
         genre: args.genre,
-        year: args.year
+        year: args.year,
+        image: args.image
       })
       movie.save()
       return movie

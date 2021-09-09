@@ -7,7 +7,8 @@ class AddMovie extends Component {
   state = {
     name: '',
     genre: '',
-    year: ''
+    year: '',
+    image: ''
   }
 
   submitMovie = (event) => {
@@ -16,7 +17,8 @@ class AddMovie extends Component {
       variables: {
         name: this.state.name,
         genre: this.state.genre,
-        year: this.state.year
+        year: this.state.year,
+        image: this.state.image
       },
       refetchQueries: [{query: allMovies}]
     })
@@ -31,7 +33,9 @@ class AddMovie extends Component {
           <label>Genre</label>
           <input type="text" required onChange={(e) => this.setState({genre: e.target.value})}/>
           <label>Year</label>
-          <input type="text" placeholder="(optional)" onChange={(e) => this.setState({year: e.target.value})}/>
+          <input type="text" placeholder="(optional)" onChange={(e) => this.setState({ year: e.target.value })} />
+          <label>Image</label>
+          <input type="text" placeholder="(optional)" onChange={(e) => this.setState({image: e.target.value})}/>
           <button type="submit">Add Movie</button>
         </form>
       </div>
