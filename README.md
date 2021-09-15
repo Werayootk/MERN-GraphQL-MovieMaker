@@ -1,4 +1,5 @@
 # MERN-GraphQL-MovieMaker
+[Live Demo](https://mern-moviemaker.herokuapp.com/)
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -63,7 +64,7 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install
    ```
-3. In folder backend/config new file `dev.env` for setup config to connect mongoDB
+3. In folder backend new file `.env` for setup config to connect mongoDB
    ```
    MONGO_URI = 'YOUR_MONGODB_CONNECTION';
    ```
