@@ -7,7 +7,7 @@ const movieSchema = require('./schema/schema');
 const resolvers = require('./resolver/resolver');
 const cors = require('cors');
 
-dotenv.config({ path: "./config/dev.env" });
+dotenv.config();
 
 mongoose
   .connect(process.env.MONGO_URI, {
